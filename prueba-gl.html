@@ -1,0 +1,54 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="prueba-gl">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>MAC Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `prueba-gl`
+     * Prueba para compartir componente.
+     *
+     * First Header | Second Header
+     * ------------ | -------------
+     * Content from cell 1 | Content from cell 2
+     * Content in the first column | Content in the second column
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class PruebaGl extends Polymer.Element {
+      static get is() { return 'prueba-gl'; }
+      static get properties() {
+        return {
+          /**
+          * Datos a mostrar
+          * @type {String}
+          */
+          prop1: {
+            type: String,
+            value: 'TEXT'
+          }
+        };
+      }
+
+      /**
+      * añade texto 
+      * @param text texto a añadir
+      * @return {string} el texto a devolver
+      */
+      addText(text) {
+        this.prop1 = this.prop1 + text;
+        return this.prop1;
+      }
+    }
+
+    window.customElements.define(PruebaGl.is, PruebaGl);
+  </script>
+</dom-module>
