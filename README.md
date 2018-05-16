@@ -19,3 +19,8 @@ $ polymer test
 ```
 
 Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
+
+First Header | Second Header
+* ------------ | -------------
+* Content from cell 1 | Content from cell 2
+* Content in the first column | Content in the second column
